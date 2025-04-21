@@ -1,0 +1,127 @@
+<html th:replace="base::layout(~{::section})">
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title></title>
+  </head>
+  <body>
+	<section>
+    <h2 style="text-align: center; color: blue;margin-top: 15px;">Student Registration Form</h2><br><br>
+	<form class="form-group" th:object="${dto}" method="post">
+		<div th:if="${msg}">
+			<p th:text="${msg}"></p>
+		</div>
+		<div class="row">
+			<div class="col-sm-1"></div>
+			<div class="col-sm-3">
+				<img src="img/registration.png" alt="" style="height: 600px; width: 500px;">
+			</div>
+			<div class="col-sm-8">
+				<table class="table table bordered" style="width: 60%; margin:auto; border: 1px solid black;">
+					<tr>
+						<td>Enter Enrollment Number</td>
+						<td>
+							<input type="number" th:field="${dto.enrollmentno}" class="form-control" required/>
+						</td>
+					</tr>
+					<tr>
+						<td>Enter Name</td>
+						<td>
+							<input type="text" th:field="${dto.name}" class="form-control" required/>
+						</td>
+					</tr>
+					<tr>
+						<td>Enter Father name</td>
+						<td>
+							<input type="text" th:field="${dto.fname}" class="form-control" required/>
+						</td>
+					</tr>
+					<tr>
+						<td>Enter Mother name</td>
+						<td>
+							<input type="text" th:field="${dto.mname}" class="form-control" required/>
+						</td>
+					</tr>
+					<tr>
+						<td>Select Gender</td>
+						<td>
+							<input type="radio" th:field="${dto.gender}" value="Male"/>Male
+							<input type="radio" th:field="${dto.gender}" value="Female"/>Female
+						</td>
+					</tr>
+					<tr>
+						<td>Enter Address</td>
+						<td>
+						    <textarea th:field="${dto.address}" class="form-control" required/></textarea>
+						</td>
+					</tr>
+					<tr>
+						<td>Select Program</td>
+						<td>
+							<select th:field="${dto.program}" class="form-control">
+								<option value="B.Tech.">B.TECH.</option>
+								<option value="M.Tech.">M.TECH.</option>
+								<option value="B.B.A.">B.B.A.</option>
+								<option value="B.C.A.">B.C.A.</option>
+								<option value="M.C.A.">M.C.A.</option>
+								<option value="B.COM.">B.COM.</option>
+								<option value="M.COM.">M.COM.</option>
+								<option value="M.B.A.">M.B.A.</option>
+							</select>
+						</td>
+					</tr>
+					<tr>
+						<td>Select Branch</td>
+						<td>
+							<select th:field="${dto.branch}" class="form-control">
+								<option value="CSE">Computer Science And Engineering</option>
+								<option value="IT">Information Technology</option>
+								<option value="ML">Machine Learning</option>
+								<option value="CE">Civil Engineering</option>
+								<option value="ME">Mechanical Engineering</option>
+							</select>
+						</td>
+					</tr>
+					<tr>
+						<td>Select year</td>
+						<td>
+							<select th:field="${dto.year}" class="form-control">
+								<option value="first year">First year</option>
+								<option value="Second year">Second year</option>
+								<option value="Third year">Third year</option>
+								<option value="Final year">Final year</option>
+							</select>
+						</td>
+					</tr>
+					<tr>
+						<td>Enter contact number</td>
+						<td>
+							<input type="number" th:field="${dto.contactno}" class="form-control" required/>
+						</td>
+					</tr>
+					<tr>
+						<td>Enter Email Address</td>
+						<td>
+							<input type="email" th:field="${dto.emailaddress}" class="form-control" required/>
+						</td>
+					</tr>
+					<tr>
+						<td>Enter Password</td>
+						<td>
+							<input type="password" th:field="${dto.password}" class="form-control" required/>
+						</td>
+					</tr>
+					<tr>
+						<td></td>
+						<td>
+							<button type="submit" class="btn btn-success">Register</button>
+						</td>
+					</tr>
+				</table> 
+			</div>
+		</div>
+	</form>
+	</section>
+  </body>
+</html>

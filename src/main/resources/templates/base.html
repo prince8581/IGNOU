@@ -1,0 +1,367 @@
+
+<html lang="en" th:fragment="layout(content)">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>IGNOU</title>
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+	<link rel="shortcut icon" href="img/stuloginimg.png" type="image/x-icon">
+	<link rel="stylesheet" href="style.css">
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+	<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+	<style>
+		body{
+					min-height: 100vh;
+					min-width: 100vw;
+					overflow-x: hidden;
+					}
+
+	</style>
+  </head>
+  <body>
+	<!--main heading-->
+	<div class="container-fluid bg-dark py-1">
+		<div class="row align-items-center">
+			<!-- Social Icons + Label -->
+			<div class="col-12 col-md-4 d-flex align-items-center justify-content-md-start justify-content-center mb-2 mb-md-0">
+				<div class="contact-info d-flex align-items-center gap-2">
+					<a href="#" class="twitter d-flex align-items-center justify-content-center"
+					   style="width: 30px; height: 30px; border-radius: 50%; border: 1px solid #fff; text-decoration: none;">
+						<i class="fa-brands fa-twitter" style="color: #fff; font-size: 14px;"></i>
+					</a>
+					<a href="#" class="facebook d-flex align-items-center justify-content-center"
+					   style="width: 30px; height: 30px; border-radius: 50%; border: 1px solid #fff; text-decoration: none;">
+						<i class="fa-brands fa-facebook" style="color: #fff; font-size: 14px;"></i>
+					</a>
+					<a href="#" class="youtube d-flex align-items-center justify-content-center"
+					   style="width: 30px; height: 30px; border-radius: 50%; border: 1px solid #fff; text-decoration: none;">
+						<i class="fa-brands fa-youtube" style="color: #fff; font-size: 14px;"></i>
+					</a>
+					<span class="text-warning ms-2">
+						<i class="fa-solid fa-cloud-sun"></i> IGNOU's AWS
+					</span>
+				</div>
+			</div>
+	
+			<!-- Spacer (optional) -->
+			<div class="d-none d-md-block col-md-4"></div>
+	
+			<!-- Right Section -->
+			<div class="col-12 col-md-4 text-center text-md-end">
+				<p class="text-white mb-0 small" style="margin-right: 20px;">
+					A- | A+ |
+					<i class="fa-solid fa-circle"></i>
+					<i class="fa-regular fa-circle"></i> |
+					English | Hindi | Accessibility
+				</p>
+			</div>
+		</div>
+	</div>
+
+
+	<div class="container-fluid bg-primary py-2">
+		<div class="row align-items-center text-center text-md-start">
+			<!-- IGNOU Logo -->
+			<div class="col-12 col-md-3 mb-2 mb-md-0 d-flex justify-content-center justify-content-md-start">
+				<img src="img/ignouLogo.png" alt="IGNOU Logo" style="height: 60px;">
+			</div>
+	
+			<!-- Heading Text -->
+			<div class="col-12 col-md-6 mb-2 mb-md-0">
+				<h5 class="text-white mb-1">Indira Gandhi National Open University (IGNOU)</h5>
+				<h6 class="text-white">इंदिरा गांधी राष्ट्रीय मुक्त विश्वविद्यालय (इग्नू)</h6>
+			</div>
+	
+			<!-- NIRF Logo -->
+			<div class="col-12 col-md-3 d-flex justify-content-center justify-content-md-end">
+				<img src="img/nirf.png" alt="NIRF Logo" style="height: 60px;">
+			</div>
+		</div>
+	</div>
+		
+	<!--navbar-->
+	<div class="container-fluid bg-primary">
+		<div class="row">
+			<div class="col-md-1"></div>
+			<div class="col-md-9">
+				<nav class="navbar navbar-expand-lg bg-secondary navbar-dark">
+					<div class="container-fluid">
+						<button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+								data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+								aria-expanded="false" aria-label="Toggle navigation">
+							<span class="navbar-toggler-icon"></span>
+						</button>
+	
+						<div class="collapse navbar-collapse" id="navbarSupportedContent">
+							<ul class="navbar-nav me-auto mb-2 mb-lg-0">
+								<li class="nav-item">
+									<a class="nav-link" href="/"><i class="fa-solid fa-house"></i> Home</a>
+								</li>
+								<li class="nav-item">
+									<a class="nav-link" href="/aboutus"><i class="fa-solid fa-address-card"></i> About Us</a>
+								</li>
+								<li class="nav-item">
+									<a class="nav-link" href="/EmployeeServices"><i class="fa-solid fa-users"></i> Employee Services</a>
+								</li>
+								<li class="nav-item">
+									<a class="nav-link" href="/StudentServices"><i class="fa-solid fa-users-rectangle"></i> Student Services</a>
+								</li>
+								<li class="nav-item">
+									<a class="nav-link" href="/registration"><i class="fa-solid fa-address-card"></i> Registration</a>
+								</li>
+								<li class="nav-item">
+									<a class="nav-link" href="/stulogin"><i class="fa fa-key fa-spin"></i> Student Login</a>
+								</li>
+								<li class="nav-item">
+									<a class="nav-link" href="/adminlogin"><i class="fa fa-key fa-spin"></i> Admin Login</a>
+								</li>
+								<li class="nav-item">
+									<a class="nav-link" href="/Media"><i class="fa-solid fa-photo-film"></i> Media</a>
+								</li>
+								<li class="nav-item">
+									<a class="nav-link" href="/contactus"><i class="fa fa-phone fa-spin ms-2"></i> Contact Us</a>
+								</li>
+							</ul>
+						</div>
+					</div>
+				</nav>
+			</div>
+			<div class="col-md-2"></div>
+		</div>
+	</div>
+		
+		<!--slider-->
+		<div class="conatiner-fluid bg-primary" style="height: 400px;">
+			<div id="carouselExampleAutoplaying" class="carousel slide" data-bs-ride="carousel">
+			  <div class="carousel-inner">
+			    <div class="carousel-item active">
+			      <img src="img/banner01.jpg" class="d-block w-100%" alt="...">
+			    </div>
+			    <div class="carousel-item">
+			      <img src="img/banner02.jpg" class="d-block w-100%" alt="...">
+			    </div>
+			    <div class="carousel-item">
+			      <img src="img/banner01.jpg" class="d-block w-100%" alt="...">
+			    </div>
+				<div class="carousel-item">
+				 <img src="img/banner02.jpg" class="d-block w-100%" alt="...">
+			   </div>
+			  </div>
+			  <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="prev">
+			    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+			    <span class="visually-hidden">Previous</span>
+			  </button>
+			  <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="next">
+			    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+			    <span class="visually-hidden">Next</span>
+			  </button>
+			</div>
+		</div>
+		
+		
+		
+		<div class="row mt-2" style="min-height: 700px; height: auto;">
+			<div th:replace="${content}"></div>
+		</div>
+		
+		<!--footer-->
+		<div class="container-fluid bg-primary py-4">
+			<div class="row text-white">
+				<div class="col-md-1"></div>
+				<div class="col-md-2">
+				<!--<div class="col-12 col-sm-6 col-md-2 offset-md-1 mb-4">-->
+					<img src="img/ignouLogoW.png" alt="" class="img-fluid mt-2">
+					<p class="mt-3">The University began by offering two academic programmes in 1987, i.e., Diploma in Management and Diploma in Distance Education, with a strength of 4,528 students.</p>
+					<div class="d-flex gap-2 mt-3">
+						<a href="#" class="d-flex align-items-center justify-content-center rounded-circle border border-white text-white" style="width: 30px; height: 30px;">
+							<i class="fa-brands fa-twitter"></i>
+						</a>
+						<a href="#" class="d-flex align-items-center justify-content-center rounded-circle border border-white text-white" style="width: 30px; height: 30px;">
+							<i class="fa-brands fa-facebook"></i>
+						</a>
+						<a href="#" class="d-flex align-items-center justify-content-center rounded-circle border border-white text-white" style="width: 30px; height: 30px;">
+							<i class="fa-brands fa-youtube"></i>
+						</a>
+					</div>
+				</div>
+		
+				<div class="col-md-2">
+					<h5 class="text-center mt-2">Employee Services</h5>
+					<ul class="list-unstyled mt-3">
+						<li>Mail Service</li>
+						<li>Regional Network</li>
+						<li>RC Services</li>
+						<li>SOUs/Other Institutions</li>
+						<li>IGNOU Credit Society</li>
+						<li>Empanelled Hospitals</li>
+						<li>University House Allotment</li>
+						<li>Jobs at IGNOU</li>
+						<li>Tenders of IGNOU</li>
+						<li>Telephone Directory</li>
+						<li>Committee Against Sexual Harassment</li>
+						<li>IGNOU-SAMARTH Portal</li>
+					</ul>
+				</div>
+		
+				
+					<div class="col-md-2">
+					<h5 class="text-center mt-2">Student Services</h5>
+					<ul class="list-unstyled mt-3">
+						<li>Common Prospectus</li>
+						<li>Podcast Link</li>
+						<li>IGNOU UDYAMI</li>
+						<li>IGNOU Online Programmes</li>
+						<li>Student Grievances</li>
+						<li>Study Material Status</li>
+						<li>Study Material Catalogue</li>
+						<li>Placement Assistance</li>
+						<li>Alumni</li>
+						<li>International Students</li>
+						<li>Study in India</li>
+						<li>FAQs</li>
+						<li>Notification on Ragging</li>
+						<li>Equal Opportunity Cell(EOC)</li>
+					</ul>
+				</div>
+		
+					<div class="col-md-2">
+					<h5 class="text-center mt-2">Useful Links</h5>
+					<ul class="list-unstyled mt-3">
+						<li>NAAC Peer Team Visit (2021)</li>
+						<li>Photos of NAAC Peer Team Visit (2021)</li>
+						<li>Other Official Websites</li>
+						<li>National Voters Service Portal</li>
+						<li>Bharatiya Chhatra Sansad</li>
+						<li>Partner Institutions</li>
+						<li>Innovation</li>
+						<li>Photo Gallery</li>
+						<li>Anti Discrimination Officer</li>
+						<li>National Youth Parliament</li>
+						<li>National Digital Library of India</li>
+						<li>Route Map</li>
+					</ul>
+				</div>
+		
+				
+					<div class="col-md-2">
+					<h5 class="text-center mt-2">Contact Us</h5>
+					<ul class="list-unstyled mt-3">
+						<li>IGNOU</li>
+						<li>Maidan Garhi,</li>
+						<li>New Delhi-110068</li>
+						<li>Phone: 29572513, 29572514</li>
+						<li>Email: info@ignou.com</li>
+					</ul>
+				</div>
+				<div class="col-md-1"></div>
+			</div>
+		</div>
+		
+		<!--<div class="container-fluid bg-primary" style="height: 600px;">
+			<div class="row">
+				<div class="col-md-1"></div>
+				<div class="col-md-2">
+					<img src="img/ignouLogoW.png" alt=""  style="margin-top: 30px;">
+					<p style="color: white; margin-top: 15px;">The University began by offering two academic programmes in 1987, i.e., Diploma in Management and Diploma in Distance Education, with a strength of 4,528 students.</p>
+					<div class="contact-info d-flex my-2">
+						                <a href="#" class="twitter me-2"
+						                   style="display: inline-flex; align-items: center; justify-content: center; width: 30px; height: 20px; border-radius: 50%; border: 1px solid #fff; text-decoration: none;">
+						                    <i class="fa-brands fa-twitter" style="color: #fff; font-size: 14px;"></i>
+						                </a>
+						                
+						                <a href="#" class="facebook me-2"
+						                   style="display: inline-flex; align-items: center; justify-content: center; width: 30px; height: 20px; border-radius: 50%; border: 1px solid #fff; text-decoration: none;">
+						                    <i class="fa-brands fa-facebook" style="color: #fff; font-size: 14px;"></i>
+						                </a>
+						                
+						                <a href="#" class="youtube me-2"
+						                   style="display: inline-flex; align-items: center; justify-content: center; width: 30px; height: 20px; border-radius: 50%; border: 1px solid #fff; text-decoration: none;">
+						                    <i class="fa-brands fa-youtube" style="color: #fff; font-size: 14px;"></i>
+						                </a>
+									</div>
+				</div>
+				<div class="col-md-2">
+					<h4 style="color: white;  margin-top: 30px; text-align: center;">Employee Services</h4><br>
+					<ul style="color: #fff; list-style: none;">
+						<li>Mail Service</li>
+						<li>Regional Network</li>
+						<li>RC Services</li>
+						<li>SOUs/Other Institutions</li>
+						<li>IGNOU Credit Society</li>
+						<li>Empanelled Hospitals</li>
+						<li>University House Allotment</li>
+						<li>Jobs at IGNOU</li>
+						<li>Tenders of IGNOU</li>
+						<li>Telephone Directory</li>
+						<li>Committee Against Sexual Harassment</li>
+						<li>IGNOU-SAMARTH Portal</li>
+					</ul>
+				</div>
+			    <div class="col-md-2">
+					<h4 style="color: white;  margin-top: 30px; text-align: center;">Student Services</h4><br>
+					<ul style="color: #fff; list-style: none;">
+							               <li>Common Prospectus</li>
+											<li>Podcast Link</li>
+											<li>IGNOU UDYAMI</li>
+											<li>IGNOU Online Programmes</li>
+											<li>Student Grievances</li>
+											<li>Study Material Status</li>
+											<li>Study Material Catalogue</li>
+											<li>Placement Assistance</li>
+											<li>Alumni</li>
+											<li>International Students</li>
+											<li>Study in India</li>
+											<li>FAQs</li>
+											<li>Notification on Ragging</li>
+											<li>Equal Opportunity Cell(EOC)</li>
+										</ul>
+				</div>
+				<div class="col-md-2">
+					<h4 style="color: white;  margin-top: 30px; text-align: center;">Useful Links</h4><br>
+					<ul style="color: #fff; list-style: none;">
+											<li>NAAC Peer Team Visit (2021)</li>
+											<li>Photos of NAAC Peer Team Visit (2021)</li>
+											<li>Other Official Websites</li>
+											<li>National Voters Service Portal</li>
+											<li>Bharatiya Chhatra Sansad</li>
+											<li>Partner Institutions</li>
+											<li>Innovation</li>
+											<li>Photo Gallery</li>
+											<li>Anti Discrimination Officer</li>
+											<li>National Youth Parliament</li>
+											<li>National Digital Library of India</li>
+											<li>Route Map</li>
+										</ul>
+				</div>
+				<div class="col-md-2">
+					<h4 style="color: white;  margin-top: 30px; text-align: center;">Contact Us</h4><br>
+										<ul style="color: #fff; list-style: none;">
+											<li>IGNOU</li>
+											<li>Maidan Garhi,</li>
+											<li>New Delhi-110068</li>
+											<li>Phone: 29572513, 29572514</li>
+											<li>Email: info@ignou.com</li>
+											
+										</ul>
+				</div>
+				<div class="col-md-1"></div>
+								
+				
+			</div>
+		</div>-->
+		
+		<div class="row">
+					<div class="col bg-secondary" style="color: white;  font-size: 20px; text-align: center;">
+						Copyright &copy; 2025 Indira Gandhi National Open University. Developed By:- Prince Kumar
+					</div>
+					
+				</div>
+
+	
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+	<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+	<script>
+	  AOS.init();
+	</script>
+  </body>
+</html>

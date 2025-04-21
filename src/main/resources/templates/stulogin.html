@@ -1,0 +1,36 @@
+<html th:replace="base::layout(~{::section})">
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title></title>
+  </head>
+  <body>
+	<section>
+    <h2 style="text-align: center; color: blue;" class="py-3 fw-bold">Student Login</h2>
+	<div class="row bg-Secondary">
+		<div class="col-sm-7 bg-white rounded-3 m-5 py-5 mx-auto">
+			<div class="text-center">
+				<img alt="img not found..." src="img/stuloginimg.png" class="w-25">
+			</div>
+			<div class="px-5">
+				<div th:if="${msg}" class="alert alert-warning alert-dismissible fade-show">
+					<span th:text="${msg}"></span>
+					<button type="button" class="btn-close" data-bs-dissmiss="alert" aria-label="Close"></button>
+				</div>
+				<form method="post" th:object="${dto}">
+					<input type="number" th:field="${dto.enrollmentno}" class="form-control rounded-5 my-2" placeholder="Enter your User id...">
+					<input type="password" th:field="${dto.password}" class="form-control rounded-5 my-2" placeholder="Enter your Password....">
+					
+					<button type="submit" class="btn btn-primary rounded-5 my-2 w-100">Login</button>
+				</form>
+			</div>
+			
+			<div class="text-center mt-5 mb-3">
+				<a href="#">Forget Password?</a>
+			</div>
+		</div>
+	</div>
+	</section>
+  </body>
+</html>

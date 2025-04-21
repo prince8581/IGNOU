@@ -1,0 +1,98 @@
+<html th:replace="base::layout(~{::section})">
+	<head>
+		
+	</head>
+	<body>
+		<section>
+			<div class="row" style="height: 30px;"></div>
+			<div class="row">
+			<div class="col-sm-6">
+				<div class="row" style="margin-left: 75px;" data-aos="fade-down">
+					<span style="color: black;"></span><h5>CONTACT____________</h5>
+					<h3>CONTACT <span style="color: brown;">  US</span></h3>
+					<iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d34956.02145056408!2d77.1920764013194!3d28.499185081467154!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390ce1de5ee6fbed%3A0x17e4392a594a1e19!2sIndira%20Gandhi%20National%20Open%20University!5e0!3m2!1sen!2sin!4v1744791532699!5m2!1sen!2sin" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+					<!--<iframe src="" width="100%" height="450" style="border:1px dashed red;" allowfullscreen="" loading="lazy"></iframe>-->
+					<!--<img src="img/u1.jpg" alt="" style="height: 300px; width: 500px;">-->
+				</div>
+			</div>
+			<div class="col-sm-1"></div>
+			<div class="col-sm-5" data-aos="fade-down">
+					<h5 style="color: darkorange;">You can find on us</h5>
+					<h3> OUR <span style="color: brown;">  ADDRESS</span></h3><br><br>
+					<h5><b style="color: darkorange;">Address:</b> Indira Gandhi National Open University<br>
+					Maidan Garhi,<br>
+					New Delhi, India<br>
+					Pin Code: 110068</h5><br>
+					<h5><b style="color: darkorange;">Office Timing:<br></b>9:30 AM to 6:00 PM<br>
+					(Monday to Friday)</h5><br>
+			</div>
+			</div><br><br>
+			<div class="row" style="height: 30px;"></div>
+			<h2 style="text-align: center; color: blue;">Enquiry Form</h2><br><br>
+						<div th:if="${msg}">
+							<p th:text="${msg}" style="color: green; text-align: center;"></p>
+						</div>	
+			<form class="form-group" th:object="${dto}" method="post">
+				<table class="table table-bordered" style="margin: auto; width: 80%; border: 1px solid black;" >
+					<tr>
+						<td>Enter Name</td>
+						<td>
+							<input type="text" th:field="${dto.name}" class="form-control" required/>
+						</td>
+					</tr>
+					<tr>
+						<td>Select Gender</td>
+						<td>
+							<input type="radio" th:field="${dto.gender}" value="Male"/>Male
+							<input type="radio" th:field="${dto.gender}" value="Female"/>Female
+						</td>
+					</tr>
+					<tr>
+						<td>Enter Address</td>
+						<td>
+							<textarea th:field="${dto.address}" required class="form-control"></textarea>
+						</td>
+					</tr>
+					<tr>
+						<td>Enter Contact No</td>
+						<td>
+							<input type="number" th:field="${dto.contactno}" required class="form-control"/>
+						</td>
+					</tr>
+					<tr>
+						<td>Enter Email Address</td>
+						<td>
+							<input type="email" th:field="${dto.emailaddress}" required class="form-control"/>
+						</td>
+					</tr>
+					<tr>
+						<td>Enter Enquiry</td>
+						<td>
+							<textarea th:field="${dto.enquirytext}" required class="form-control"></textarea>
+						</td>
+					</tr>
+					<tr>
+						<td></td>
+						<td>
+							<button type="submit" class="btn btn-primary">Submit</button>
+						</td>
+					</tr>
+				</table>
+			</form>
+			
+			</div><br><br>
+			
+		</section>
+	
+		<!--<section class="py-0">
+		  <div class="container-fluid">
+		    <div class="row">
+			<div class="col-sm-12 p-0">
+			<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3597.631245571362!2d85.139156215018!3d25.617166983702553!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39ed585a72898067%3A0x332ef319c1947f5e!2sNalanda%20Open%20University!5e0!3m2!1sen!2sin!4v1645340092881!5m2!1sen!2sin" width="100%" height="450" style="border:1px dashed red;" allowfullscreen="" loading="lazy"></iframe>
+			</div>
+			</div>
+			</div>-->
+		</section>
+		
+	</body>
+</html>
