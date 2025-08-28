@@ -1,17 +1,3 @@
+📘 IGNOU Project — Student & Course Management System
 
-📝 Overview
-
-This project showcases a responsive frontend website suitable for academic submission. It includes modular HTML pages, reusable UI components, and clean styles following Bootstrap best practices. JavaScript is used for interactivity, form validation, and DOM updates.
-
-🎯 Learning Objectives
-
-Practice semantic HTML and maintainable CSS architecture.
-
-Build responsive layouts using Bootstrap grid and utilities.
-
-Implement vanilla JS interactivity (events, validation, DOM manipulation).
-
-Follow version control best practices using Git & GitHub.
-
-Prepare a clear, evaluation-friendly documentation set for IGNOU.
-
+A full-stack academic project built for IGNOU submission using HTML5, CSS3, JavaScript, Bootstrap for the frontend and Spring Boot + MySQL for the backend. The project integrates essential student-related modules such as login, enquiry, complaints, feedback, and SMS API notifications.
