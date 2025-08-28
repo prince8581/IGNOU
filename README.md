@@ -19,6 +19,15 @@ Work with MySQL relational database.
 Integrate external services such as SMS API.
 
 Follow best practices for Git & GitHub version control.
+frontend/
+├── index.html
+├── css/
+│ └── styles.css
+├── js/
+│ └── app.js
+├── assets/
+│ └── images/
+└── README.md
 
 ├── frontend/
 │ ├── index.html # Landing page
